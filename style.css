@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: popins;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+   
+}
+.background-clips{
+    position: absolute;
+    object-fit: cover;
+ min-width:100%;
+ max-height:100vh; 
+  z-index: -1;
+  
+}
+.container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+ input{
+    width: 120px;
+    height: 30px;
+    text-align: center;
+ } 
+
+
+
+/* form start */
+.tbform{
+    position: absolute;
+    color: rgba(223, 27, 5, 0.998);
+    text-align: center !important;
+    width:500px ;
+    min-height:70vh ;
+    background-color: rgba(0, 0, 0,0.4);
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  line-height: 3;
+  word-spacing: 5px;
+  font-size: 25px;
+    
+}
+
+.button,a{
+    align-items: center;
+    text-decoration: none;
+}
+.btn{
+    text-align: center;
+    padding: 20px 50px;
+    border: none;
+    outline: none;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    justify-content: center;
+}
+.btn::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #efdddd;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.btn::before{
+    content: "";
+    background: linear-gradient(45deg,
+        #ada3a3,#FF7300,#FFFB00,#48FF00,
+        #00FFD5,#002BFF,#FF00C8,#c14545
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+@keyframes glowing{
+    0%{background-position: 0 0;}
+   50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+
+}
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media(min-aspect-ratio:16/9){
+    .background-clips{
+    width: 100%;
+    height: auto;}
+}
+@media(min-aspect-ratio:16/9){
+    .background-clips{
+    width: auto;
+    height: auto;}
+}

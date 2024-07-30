@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TABLE PRINTER TASK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  
+    <div class="container">
+      <video
+        autoplay
+        loop
+        muted
+        plays-inline
+        class="background-clips"
+        src="video/3130182-uhd_3840_2160_30fps.mp4"
+        type="video/mp4"
+      ></video>
+      <div class="container-2">
+        <div class="tbform">
+          <h1>TABLE PRINTER</h1>
+          <form id="forms" action="javascript:void(0);">
+            <label for="numInput"
+              >NUMBER FOR TABLE:
+              <input type="number" id="numInput" />
+            </label>
+            <br />
+            <label for="numStartInput"
+              >TABLE START:
+              <input type="number" id="numStartInput" />
+            </label>
+            <br />
+            <label for="numEndInput"
+              >TABLE END:
+              <input type="number" id="numEndInput" />
+            </label>
+            <br />
+            <button class="btn" id="generateBtn">Generate Table</button>
+          </form>
+          <div class="output" id="output"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
